@@ -1,6 +1,6 @@
 # Harp Minimal Boilerplate
 
-A static template based on [hb-minimum, a minimal boilerplate for the Harp Application](https://github.com/harp-boilerplates/hb-minimal), for use as a starting point for future static websites.
+A static template based on [hb-minimum](https://github.com/harp-boilerplates/hb-minimal), a minimal boilerplate for the Harp Application, for use as a starting point for future static websites.
 
 If you're ever curious about how the stuff here works, see the [Harp documentation](http://docs.harp.io/ "Learn how to develop using Harp.").
 
