@@ -1,0 +1,13 @@
+{
+  "name": "holiday14",
+  "description": "Static website (sdstate.edu/holiday) and build tooling for the 2014 holiday video",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^1.7.2",
+    "gulp": "^3.8.10",
+    "gulp-debug": "^1.0.1",
+    "gulp-ftp": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "harp": "^0.14.0"
+  }
+}
