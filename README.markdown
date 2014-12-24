@@ -1,8 +1,8 @@
 # Harp Minimal Boilerplate
 
-A static template based on [hb-minimum](https://github.com/harp-boilerplates/hb-minimal), a minimal boilerplate for the Harp Application, for use as a starting point for future static websites.
+A static template based on [hb-minimum], a minimal boilerplate for the Harp Application, for use as a starting point for future static websites.
 
-If you're ever curious about how the stuff here works, see the [Harp documentation](http://docs.harp.io/ "Learn how to develop using Harp.").
+If you're ever curious about how Harp works, "[The Rules]" is a fantastic (and brief) introduction. See the full [Harp documentation] for more.
 
 ## Getting started
 
@@ -45,11 +45,14 @@ This website will appear in a directory defined in the `compiledOutput` variable
 All of the magic here is thanks to the wonderful tools [Harp], [Gulp], and [BrowserSync].
 
 
-[BrowserSync]:http://www.browsersync.io/
-[Dash]:http://kapeli.com/dash
-[Git]:http://git-scm.com/
-[Gulp]:http://gulpjs.com/
-[Harp]:http://harpjs.com/
-[Jade]:http://jade-lang.com/
-[Less]:http://lesscss.org/
-[Node]:http://nodejs.org/
+[BrowserSync]: http://www.browsersync.io/
+[Dash]: http://kapeli.com/dash
+[Git]: http://git-scm.com/
+[Gulp]: http://gulpjs.com/
+[Harp]: http://harpjs.com/
+[hb-minimum]: https://github.com/harp-boilerplates/hb-minimal
+[The Rules]: http://harpjs.com/docs/development/rules
+[Harp documentation]: http://harpjs.com/docs/
+[Jade]: http://jade-lang.com/
+[Less]: http://lesscss.org/
+[Node]: http://nodejs.org/
