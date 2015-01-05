@@ -26,10 +26,10 @@ gulp.task('serve', function () {
       proxy: 'localhost:' + port
     });
     gulp.watch('public/**/*.less', function () {
-      browserSync.reload('main.css', {stream: true});
+      browserSync.reload('main.css', { stream: true });
     });
     gulp.watch('public/**/*.js', function () {
-      browserSync.reload('main.js', {stream: true});
+      browserSync.reload('main.js', { stream: true });
     })
     gulp.watch('public/**/*.jade', function () {
       browserSync.reload();
