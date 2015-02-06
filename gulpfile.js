@@ -1,11 +1,14 @@
 var browserSync = require('browser-sync');
 var gulp        = require('gulp');
 var debug       = require('gulp-debug');
+var util        = require('gulp-util');
 var harp        = require('harp');
 
 
 gulp.task('commands', function () {
-  console.log('This project has the following commands available:\n\t- Run `gulp serve` to launch a local version of the site.\n\t- Run `gulp compile` to build a version of the website for FTP upload.');
+  util.log('This project has the following commands available:\n- Run `gulp serve` to launch a local version of the site.\n- Run `gulp compile` to build a version of the website for FTP upload.');
+  util.log('- Run `gulp serve` to launch a local version of the site.');
+  util.log('- Run `gulp compile` to build a version of the website for FTP upload.');
 })
 
 gulp.task('compile', function () {
@@ -13,9 +16,9 @@ gulp.task('compile', function () {
   // Call `harp compile` as a pre-step for deployment
   // harp.compile(projectPath [,outputPath] [, callback])
   harp.compile(__dirname, compiledOutput, function (error) {
-    if (error) console.log(error);
+    if (error) util.log(error);
   });
-  console.log('Compiled the website into the \'' + compiledOutput + '\' directory.');
+  util.log('Compiled the website into the \'' + compiledOutput + '\' directory.');
 });
 
 gulp.task('serve', function () {
