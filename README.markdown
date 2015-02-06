@@ -1,4 +1,4 @@
-# Harp Minimal Boilerplate
+# Static Boilerplate
 
 A static template based on [hb-minimum], a minimal boilerplate for the Harp Application, for use as a starting point for future static websites.
 

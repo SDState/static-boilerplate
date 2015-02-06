@@ -1,6 +1,6 @@
 {
-  "name": "holiday14",
-  "description": "Static website (sdstate.edu/holiday) and build tooling for the 2014 holiday video",
+  "name": "static-boilerplate",
+  "description": "A template for static websites",
   "private": true,
   "devDependencies": {
     "browser-sync": "^1.7.2",
