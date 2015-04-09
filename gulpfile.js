@@ -2,17 +2,19 @@ var browserSync = require('browser-sync');
 var gulp        = require('gulp');
 var debug       = require('gulp-debug');
 var util        = require('gulp-util');
+// var ftp         = require('vinyl-ftp'); // Not installed--but could be...
 var harp        = require('harp');
 
 
 gulp.task('commands', function () {
-  util.log('This project has the following commands available:\n- Run `gulp serve` to launch a local version of the site.\n- Run `gulp compile` to build a version of the website for FTP upload.');
-  util.log('- Run `gulp serve` to launch a local version of the site.');
-  util.log('- Run `gulp compile` to build a version of the website for FTP upload.');
-})
+  util.log('This project has the following commands available:' +
+           '\n- Run `gulp serve` to launch a local version of the site.' +
+           '\n- Run `gulp compile` to build a version of the website for FTP upload.');
+});
 
 gulp.task('compile', function () {
   var compiledOutput = 'www';
+
   // Call `harp compile` as a pre-step for deployment
   // harp.compile(projectPath [,outputPath] [, callback])
   harp.compile(__dirname, compiledOutput, function (error) {
@@ -23,6 +25,7 @@ gulp.task('compile', function () {
 
 gulp.task('serve', function () {
   var port = 9000;
+
   harp.server(__dirname, { port: port }, function () {
     browserSync({
       notify: false,
@@ -33,7 +36,7 @@ gulp.task('serve', function () {
     });
     gulp.watch('public/**/*.js', function () {
       browserSync.reload('main.js', { stream: true });
-    })
+    });
     gulp.watch('public/**/*.jade', function () {
       browserSync.reload();
     });
