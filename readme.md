@@ -24,26 +24,26 @@ There's a lot of magic going on here, so let me explain some of it.
 
 All the source files reside in `/public`. The HTML is written in [Jade]; the CSS is written in [Less]. (The docs for these languages are available in [Dash] too.)
 
-To kick up a server, type `gulp serve` (or just `gulp`). Here's where the real magic happens:
+To kick up a server, type `gulp serve`. Here's where the real magic happens:
 
-* Your default browser will open a new tab containing the holiday website.
+* Your default browser will open a new tab for the website.
 * This website will be available to _anyone else on the network_ at the "External URL" provided in the command line output.
 * Changes you make to the files inside `public` will be reflected automatically (for everyone) as you save.
-* If you get a compile error, it'll show up in big print at the top of your website URL. The server won't quit on you though so once you fix the error, your website will return.
+* If you get a compile error, it'll show up in big print at the top of the website. Once you fix the error and save, your website will return.
+* Check out the BrowserSync UI page at http://localhost:3001 for some very neat stuff.
 
 This lets us prototype publicly amongst the entire team. It doesn't get our website out to the public though. That comes next.
 
 ## A little more about Step Six
 ### Uploading to www.sdstate.edu
 
-When you're ready to upload your changes to sdstate.edu, run the command `gulp compile` to get back a complete website.
+When you're ready to upload your changes to sdstate.edu, run the command `gulp compile` (or `gulp build`) to get back a complete website. (If you're still running `serve`, either quit or open a new Terminal tab for the `gulp compile` command.)
 
 This website will appear in a directory defined in the `compiledOutput` variable inside our [gulp file](gulpfile.js). By default, this is  `www`. In any case, look for the new folder. If it looks like a website, it probably is.
 
 ## Credit
 
 All of the magic here is thanks to the wonderful tools [Harp], [Gulp], and [BrowserSync].
-
 
 [BrowserSync]: http://www.browsersync.io/
 [Dash]: http://kapeli.com/dash
