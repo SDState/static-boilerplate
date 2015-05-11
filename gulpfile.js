@@ -1,4 +1,3 @@
-var browserSync = require('browser-sync');
 var gulp        = require('gulp');
 var debug       = require('gulp-debug');
 var util        = require('gulp-util');
@@ -24,22 +23,21 @@ gulp.task('compile', function () {
 });
 
 gulp.task('serve', function () {
+  var browserSync = require('browser-sync').create();  // "post 2.0.0 syntax"
   var port = 9000;
 
   harp.server(__dirname, { port: port }, function () {
-    browserSync({
-      notify: false,
+    browserSync.init({
+      // notify: false,
       proxy: 'localhost:' + port
     });
-    gulp.watch('public/**/*.less', function () {
-      browserSync.reload('main.css', { stream: true });
-    });
-    gulp.watch('public/**/*.js', function () {
-      browserSync.reload('main.js', { stream: true });
-    });
-    gulp.watch('public/**/*.jade', function () {
-      browserSync.reload();
-    });
+  });
+
+  gulp.watch('public/**/*.less', function () {
+    browserSync.reload('main.css');
+  });
+  gulp.watch(['public/**/*.jade', 'public/**/*.js'], function () {
+    browserSync.reload();
   });
 });
 
