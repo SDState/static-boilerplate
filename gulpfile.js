@@ -18,8 +18,10 @@ gulp.task('compile', function () {
   // harp.compile(projectPath [,outputPath] [, callback])
   harp.compile(__dirname, compiledOutput, function (error) {
     if (error) util.log(error);
+    else util.log(
+      'Compiled the website into the \'' + compiledOutput + '\' directory.'
+    );
   });
-  util.log('Compiled the website into the \'' + compiledOutput + '\' directory.');
 });
 
 gulp.task('serve', function () {
